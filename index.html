@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integracja Multimediów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Moja Strona z Multimediami</h1>
+        <nav>
+            <ul>
+                <li><a href="#wideo-plik">Wideo z Pliku</a></li>
+                <li><a href="#wideo-youtube">Wideo z YouTube</a></li>
+                <li><a href="#dzwiek">Dźwięk z Pliku</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="wprowadzenie">
+            <h2>Wprowadzenie</h2>
+            <p>Na tej stronie przetestujemy różne sposoby dodawania dźwięku i wideo do strony internetowej.</p>
+        </section>
+
+        
+        <section id="wideo-plik">
+            <h2>Wideo z Pliku (MP4)</h2>
+            <p>To jest przykład osadzenia pliku wideo bezpośrednio z folderu projektu za pomocą tagu
+                <code>&lt;video&gt;</code>.</p>
+            <video controls width="600"> 
+                <source src="Jak Maturalni Manipulują Swoimi Uczniami？.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje tagu video lub formatu MP4. Spróbuj użyć innej przeglądarki.
+            </video>
+            <p class="wskazowka">
+                Użyliśmy tagu <code>&lt;video&gt;</code> z atrybutem <code>controls</code>. Wewnątrz umieściliśmy tag
+                <code>&lt;source&gt;</code> ze ścieżką <code>video/moje_wideo.mp4</code>, ponieważ plik znajduje się w
+                podfolderze 'video'. Atrybut <code>width="600"</code> ustawia szerokość, ale CSS może ją nadpisać dla
+                responsywności.
+            </p>
+        </section>
+
+        
+        <section id="wideo-youtube">
+            <h2>Wideo z YouTube (iframe)</h2>
+            <p>Poniżej znajduje się przykładowe wideo osadzone z YouTube za pomocą tagu <code>&lt;iframe&gt;</code>. W
+                ćwiczeniu podmienisz je na własne.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qXLdzX93Iqk?si=AZ2nnILi5mIr-EWQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="wskazowka">Pamiętaj, aby uzyskać kod do osadzenia bezpośrednio ze strony YouTube (Udostępnij ->
+                Umieść).</p>
+        </section>
+
+        <section id="dzwiek">
+            <h2>Dźwięk z Pliku (MP3)</h2>
+            <p>To jest przykład osadzenia pliku dźwiękowego za pomocą tagu <code>&lt;audio&gt;</code>.</p>
+            <audio controls>
+                <source src="Jak Maturalni Manipulują Swoimi Uczniami？.mp3" type="audio/mpeg">
+                Twoja przeglądarka nie obsługuje elementu audio.
+            </audio>
+            <p class="wskazowka">Upewnij się, że ścieżka w atrybucie <code>src</code> jest poprawna.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Moja Strona Multimedialna</p>
+    </footer>
+
+</body>
+
+</html>
